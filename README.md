@@ -9,12 +9,12 @@ steps:
 - uses: actions/checkout@v3
 - uses: liquibase-github-actions/rollback-one-update@v4.23.0
   with:
-    # The root changelog
+    # The root changelog file
     # string
     # Required
     changelogFile: ""
 
-    # The JDBC target database connection URL
+    # The JDBC database connection URL
     # string
     # Required
     url: ""
@@ -28,6 +28,11 @@ steps:
     # string
     # Optional
     changeExecListenerPropertiesFile: ""
+
+    # Context string to use for filtering
+    # string
+    # Optional
+    contexts: ""
 
     # The default catalog name to use for the database connection
     # string
@@ -59,7 +64,12 @@ steps:
     # Optional
     force: ""
 
-    # The target database password
+    # Label expression to use for filtering
+    # string
+    # Optional
+    labelFilter: ""
+
+    # Password to use to connect to the database
     # string
     # Optional
     password: ""
@@ -69,7 +79,7 @@ steps:
     # Optional
     rollbackScript: ""
 
-    # The target database username
+    # Username to use to connect to the database
     # string
     # Optional
     username: ""
