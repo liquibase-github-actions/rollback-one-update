@@ -6,7 +6,7 @@ Official GitHub Action to run Liquibase Rollback One Update in your GitHub Actio
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: liquibase-github-actions/rollback-one-update@v4.29.2
+- uses: liquibase-github-actions/rollback-one-update@v4.30.0
   with:
     # The root changelog file
     # string
@@ -110,7 +110,7 @@ The liquibase rollback one update action accepts all valid liquibase global opti
 ```yaml
 steps:
   - uses: actions/checkout@v3
-  - uses: liquibase-github-actions/rollback-one-update@v4.29.2
+  - uses: liquibase-github-actions/rollback-one-update@v4.30.0
     with:
       changelogFile: ""
       url: ""
